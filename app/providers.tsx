@@ -8,15 +8,15 @@ import { ThemeProviderProps } from "next-themes/dist/types";
 
 export interface ProvidersProps {
 	children: React.ReactNode;
-	themeProps?: ThemeProviderProps;
+	// themeProps?: ThemeProviderProps;
 }
 
-export function Providers({ children, themeProps }: ProvidersProps) {
-  const router = useRouter();
+export function Providers({ children}: ProvidersProps) {
+//   const router = useRouter();
 
 	return (
-		<NextUIProvider navigate={router.push}>
-			<NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
+		<NextUIProvider>
+			{children}
 		</NextUIProvider>
 	);
 }
